@@ -17,3 +17,6 @@ https://hooks.slack.com/services/T[a-zA-Z0-9_]{8}/B[a-zA-Z0-9_]{8}/[a-zA-Z0-9_]{
 \"type\": \"service_account\"
 SK[a-z0-9]{32}
 [a-zA-Z]{3,10}://[^/\\s:@]{3,20}:[^/\\s:@]{3,20}@.{1,100}[\"\'\\s]
+<connection-url>.*</connection-url>
+<user-name>
+<password>
