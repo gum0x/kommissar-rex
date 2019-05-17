@@ -16,6 +16,8 @@
 
 ## Grep in windows
 *Print the files with credit cards on the current path (recursively)*
-  Get-ChildItem -Recurse  | Where-Object { !$_.PSIsContainer }|ForEach-Object -Process {if(cat $_.name|select-string -Pattern "\b[456]\d{3}[ -]?(\d{4}[ -]?){3}\b" -quiet){$_.fullname}}
 
+```powershell
+Get-ChildItem -Recurse | Where-Object { !$_.PSIsContainer }|ForEach-Object -Process {if(cat $_.fullname|select-string -Pattern "\b[456]\d{3}[ -]?(\d{4}[ -]?){3}\b" -quiet){$_.fullname}}
+```
 
