@@ -18,6 +18,6 @@
 *Print the files with credit cards on the current path (recursively)*
 
 ```powershell
-Get-ChildItem -Recurse | Where-Object { !$_.PSIsContainer }|ForEach-Object -Process {if(cat $_.fullname|select-string -Pattern "\b[456]\d{3}[ -]?(\d{4}[ -]?){3}\b" -quiet){$_.fullname}}
+gci -Recurse | Where { !$_.PSIsContainer }|ForEach-Object {if(cat $_.fullname|select-string -Pattern "\b[456]\d{3}[ -]?(\d{4}[ -]?){3}\b" -quiet){$_.fullname}}
 ```
 
